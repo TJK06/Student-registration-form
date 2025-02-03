@@ -2,6 +2,16 @@
 <head>
 <title>Registration Form</title>
 <body style="background-image: url('R.jpg');">
+   <script>
+        function savedata(){
+            let username = document.getElementById("mail").value;
+            let password = document.getElementById("password").value;
+            localStorage.setItem("mail",username);
+            localStorage.setItem("password",password);
+            alert(localStorage.getItem("mail"));
+            alert(localStorage.getItem("password"));
+        }
+    </script>
 <h1><B><center>Student's Registration Form</centre></B></h1><HR>
 <marquee bgcolor="powderorange"> Rajagiri Collage of Social Sciences, Kalamaserry | Rajagiri Collage of Social Sciences, Kalamaserry | Rajagiri Collage of Social Sciences, Kalamaserry | Rajagiri Collage of Social Sciences, Kalamaserry | Rajagiri Collage of Social Sciences, Kalamaserry </marquee>
 <BR>
@@ -9,7 +19,7 @@
 <BR>
 Student ID <input type="text"><br><BR>
 DOB <input type="date"><BR><BR>
-Mail ID <input type="email"><BR><BR>
+Mail ID <input type="email" id="mail"><BR><BR>
 Courses <select name="courses" id="courses">
 <option value="select">-Select-</option>
 <option value="ca">CA</option>
@@ -21,9 +31,9 @@ Address <textarea></textarea><BR><BR>
 Phone Number <input type="number"><BR><BR>
 Gender <input type="radio" name="gender" value="male"> Male
 <input type="radio" name="gender" value="female"> Female<BR><BR>
-Create Password <input type="password"><BR><BR>
+Create Password <input type="password" id="password"><BR><BR>
 Re type Password <input type="password"><BR><BR>
-<button>Submit</button>
+<button onclick="savedata()">Submit</button>
 <button>Clear</button><BR><BR><BR><BR>
 <img src="logo-25.jpg" width=100>
 </head>
